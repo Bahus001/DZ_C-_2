@@ -7,20 +7,20 @@
 // 782 -> 8
 // 918 -> 1
 
-Console.WriteLine ("ВВедите трех значное число ");
+Console.WriteLine("ВВедите трех значное число ");
 int number = Convert.ToInt32(Console.ReadLine());
 
-if(number<1000 && number>99)
+int ToEat(int num)
 {
-    
+    {
+        num = num / 10 % 10;
+    }
+    return num;
 }
-Console.WriteLine("Вы ввели не трех значное число ");
-
-int ToEat (int num)
-{       
-  int res = num / 10 % 10;   
-  return res;
+if (number > 99 && number < 1000)
+{
+    int result = ToEat(number);
+    Console.WriteLine(result);
 }
-int result = ToEat(number);
+else Console.WriteLine("Ошибка! введено не трех значное число");
 
-Console.WriteLine(result);

@@ -8,20 +8,21 @@
 Console.WriteLine("ВВедите число ");
 int number = Convert.ToInt32(Console.ReadLine());
 
-int Three(int num1)
+int Three(int num)
 {
-    int result = 0;
-    if (num1 < 100);
-    return num1;
-    if (num1 > 999);
+    while (num > 1000)
     {
-        while (num1 < 10000)
-        {
-            num1 = num1 / 10;
-        }
-        result = num1 % 10;
-        return result;
+        num = num / 10;
     }
+    return num % 10;
 }
-int enter = Three(number);
-Console.WriteLine(Three(enter));
+if (number < 0) number = -number;
+if (number > 99)
+{
+    int result = Three(number);
+    Console.WriteLine(result);
+}
+else
+{
+    Console.WriteLine("Третьей цифы нет");
+}
